@@ -1,0 +1,213 @@
+/* import popin font from google */
+@font-face {
+    font-family: 'Kajiro';
+    src: url('./font/Kajiro.eot');
+    src: local('Kajiro'),
+        url('./font/Kajiro.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    font-family: 'Kajiro', sans-serif;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    background: rgb(22, 22, 20);
+    color: rgb(255, 255, 231);
+}
+
+.tab_box {
+    position: absolute;
+    top: 25px;
+    z-index: 4;
+    display: flex;
+    gap: 2vw;
+}
+
+.tab_box .tab_btn {
+    padding: 5px 40px;
+    /*responsive*/
+    font-size: calc(12px + 1vw);
+    font-weight: 500;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.tab_box .tab_btn.active {
+    color: beige;
+    border-bottom: 2px solid beige;
+}
+
+.fullScreen {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.bi-fullscreen,
+.bi-fullscreen-exit {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 234);
+    -webkit-text-stroke: 1px;
+}
+
+.bi-fullscreen {
+    display: block;
+}
+
+.bi-fullscreen-exit {
+    display: none;
+}
+
+.content_box .content {
+    display: none;
+    width: 100%;
+}
+
+.content_box .content.active {
+    display: inline-block;
+}
+
+.stpwtch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.clock {
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    gap: 2vw;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+.ampm {
+    position: relative;
+    height: 50px;
+    top: 10vw;
+    font-size: calc(3.5vw);
+    letter-spacing: 5px;
+}
+
+.timeZone {
+    font-size: calc(16px + 2.5vw);
+    font-weight: 700;
+    position: fixed;
+    font-family: 'Kajiro', sans-serif;
+    background: transparent;
+    border: none;
+    display: flex;
+    color: rgb(255, 255, 234);
+    cursor: pointer;
+    outline: none;
+    left: 1rem;
+    bottom: 0;
+    z-index: 3;
+    letter-spacing: 5px;
+}
+
+.hourrr {
+    margin-top: 5px;
+}
+
+.timer {
+    font-size: 29vw;
+    font-weight: 700;
+}
+
+#secZero {
+    display: none;
+}
+
+.stopwatch {
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    gap: 2vw;
+    width: 57.3vw;
+    justify-content: space-between;
+}
+
+.stopflex {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    width: 202px;
+}
+
+.stopwatchBtns {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    bottom: 6rem;
+    z-index: 3;
+}
+
+.stopMilliSec {
+    position: absolute;
+    right: -3rem;
+    top: calc(8vw);
+    font-size: calc(16px + 2.5vw);
+    letter-spacing: 5px;
+    display: flex;
+}
+
+.stopwatchBtn {
+    background-color: transparent;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    color: beige;
+    border: 3px solid beige;
+    text-align: center;
+    font-size: 35px;
+    padding: 2px 0 0 0;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.stopwatchBtn:hover {
+    transform: scale(1.05);
+}
+
+.stopwatchBtn:active {
+    transform: scale(0.95);
+}
+
+#stopBtn {
+    display: none;
+}
+
+/* .bi-play-fill, .bi-pause-fill, .bi-stop-fill {
+    position: relative;
+    margin-left: 4px;
+} */
