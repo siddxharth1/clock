@@ -75,6 +75,11 @@ setInterval(() => {
   if (hour24 === 12) {
     hour = hour === 0 ? 12 : hour;
   }
+
+if (currentAmPm !== prevAmPm) {
+    ampm.innerHTML = currentAmPm;
+    prevAmPm = currentAmPm;
+  }
   const hour1 = Math.floor(hour / 10);
   const hour2 = hour % 10;
 
