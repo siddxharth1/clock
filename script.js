@@ -58,17 +58,21 @@ const odometers = {
   timeZone24: new Odometer({ el: timeZone24, value: hour24 }),
 };
 
+
+let prevAmPm = ''; 
 setInterval(() => {
   const date = new Date();
   let hour = date.getHours() % hour24;
   let min = date.getMinutes();
   let sec = date.getSeconds();
 
+ let currentAmPm = '';
+
   if (hour24 == 12) {
     if (date.getHours() < 12) {
-      ampm.innerHTML = "AM";
+      currentAmPm = "AM";
     } else {
-      ampm.innerHTML = "PM";
+      currentAmPm = "PM";
     }
   }
 
